@@ -9,6 +9,7 @@ html {
     height: 100%;
     font-size: 14px;
     font-family: 'Poppins', sans-serif;
+
 }
 
 body {
@@ -16,15 +17,120 @@ body {
     background-color: #aabbaa;
 }
 
-/* Nav */
+
+.title {
+  font-family: "Playfair Display", serif;
+  font-size: 60px;
+  font-weight: 400;
+  font-style: normal;
+  float: left;
+  height: 70%;
+  margin-left: 20px;
+  padding: 15px 0px 15px 10px;
+}
+
+/* navagation links */
+
+
+nav ul {
+    list-style: none;
+    text-align: right;
+    padding-right: 30px;
+    margin: 0;
+    text-align:center;
+}
+
+nav li {
+    font-size: 30px;
+    line-height: 50px;
+    height: 50px;
+    display: inline-block;
+    margin-left: 100px;
+    padding-top: 30px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+nav a:hover {
+    color:#800000;
+}
 
 .nav {
     text-align: right;
 }
 
 .nav .a {
-    color: black;
     padding-left: 20px;
+}
+
+a, a:visited {
+    color: black ;
+    text-decoration: none !important;
+}
+
+/* Main page image */
+
+#main-img-outer {
+    height: 320px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#cover-text h2, #cover-text h3 {
+    color: white;
+    font-weight: 200;
+}
+
+#cover-text h2 {
+    font-size: 33px;
+}
+
+#cover-text h3 {
+    font-size: 25px;
+}
+
+#main-img {
+    height: 320px;
+    width: 100%;
+    background: url('../images/Rotem-2.png') center center / cover no-repeat fixed;
+} 
+
+#cover-text {
+    font-size: 40%;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-transform: uppercase;
+    font-weight: 200;
+    text-align: right;
+
+    width: 320px;
+    height: 70px;
+
+    padding: 10px;
+
+    background:rgba(0,0,0, 0.5);
+
+    bottom: 60px;
+    right: 10px;
+
+    position:absolute;
+}
+
+/* About us */
+
+#about h2 {
+    text-align: center;
+    margin:20px;
+}
+
+#about-us{
+    padding: 10px;
+    margin: 10px;
+}
+
+#about-us p {
+    text-align: center;
 }
 
 /* Tour Section */
@@ -32,6 +138,8 @@ body {
 .tour-section {
     display: block;
     margin-left: 10%;
+    margin-bottom: 10%;
+    margin-top: 10%;
     /* background-color: #aabbaa; */
 } 
 
@@ -42,6 +150,7 @@ body {
 
 .tour-section h2 {
     font-weight: bold;
+    bottom: 60px;
 }
 
 .tour-card {
@@ -91,6 +200,11 @@ body {
 /* Song Section */
 
 .song-section {
+    width: 100vw;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     display: flex;
     min-height: 100%;
     align-items: center;
@@ -175,4 +289,70 @@ body {
     font-size: 25px;
     line-height: 1;
     text-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+}
+
+
+
+
+/* Footer Section */
+
+
+footer {
+    height: 100px;
+    background-color: #aabbaa;
+    position: relative;
+    top: 15px;
+}
+
+footer ul {
+    list-style: none;
+    text-align: left;
+    padding:20px;
+    margin-left:20px;
+    display:inline-block;
+    clear:right;
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+    font-size: small;
+}
+
+footer li {
+    font-size: 60%;
+    line-height: 30px;
+    height: 5px;
+    display: inline-block;
+    margin: 5px;
+    position: relative;
+    top: 30px;
+}
+
+footer a {
+    color:black;
+}
+
+#f-contact {
+    color: black;
+    width: 50%;
+    font-size: 100%;
+    
+    float: right;
+    text-align: right;
+    margin-right: 40px;
+
+    position: relative;
+}
+
+#f-contact i {
+    padding: 0 10px;
+}
+
+#social i {
+    font-size: 400%;
+    position: relative;
+    bottom: 10px;
+    margin-right:20px;
+}
+
+
 }
