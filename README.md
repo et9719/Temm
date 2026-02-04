@@ -1,3 +1,10 @@
+<!-- python -m http.server 8000 -->
+<!-- 
+git add .
+git commit -m " Add message "
+git push 
+-->
+
 #Temm
 
 ##Introduction
