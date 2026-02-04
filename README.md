@@ -1,108 +1,335 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+#Temm
 
-Welcome et9719,
+##Introduction
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Temm is a singer based in London and I am (or maybe have by the time anyone sees this) creating a website for her fans or anyone interested in getting to know her art a little bit more. The users will be able to learn a bit about Rotem herself, listen to her music, purchase tickets to her shows (through links to her ticket suppliers), and see images and videos of Temm's previous performances. This project will use the following languages and frameworks: HTML and CSS <!--and JavaScript -->.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+<!-- ADD IN I AM RESPONSIVE IMG -->
+Am I responsive: http://ami.responsivedesign.is/
+<!-- <img src="media/readme_media/amiresponsive.png" alt="Live website image"> -->
 
-## Gitpod Reminders
+[Click here to go to the live website!]( ) <!-- ADD LINK TO WEBSITE IN THESE () -->
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Table of contents
 
-`python3 -m http.server`
+1. [Wireframes](#wireframes)
+2. [User Stories](#user-stories)
+3. [Objectives](#objectives)
+4. [Features](#features)
+    - [Navigation Bar](#navigation-bar)
+    - [Footer](#footer)
+    - [Music links](#music-links)
+    - [Shows links](#shows-links)
+    - [Videos](#videos)
+5. [SEO](#seo)
+6. [Testing](#testing)
+    - [HTML](#html)
+    - [CSS](#css)
+    - [Manual Testing](#manual-testing)
+7. [Bugs](#bugs)
+8. [Deployment](#deployment)
+9. [Credits](#credits)
 
-A blue button should appear to click: _Make Public_,
+## Wireframes
 
-Another blue button should appear to click: _Open Browser_.
+### Home 
+<img src="assets/images/wire-home.png" alt="wireframe for home page">
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+[Table of contents](#table-of-contents)
 
-A blue button should appear to click: _Make Public_,
+### Music 
+<img src="assets/images/wire-songs.png" alt="wireframe for music page">
 
-Another blue button should appear to click: _Open Browser_.
+[Table of contents](#table-of-contents)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Shows 
+<img src="assets/images/wire-shows.png" alt="wireframe for shows page">
 
-To log into the Heroku toolbelt CLI:
+[Table of contents](#table-of-contents)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Watch 
+<img src="assets/images/wire-watch.png" alt="wireframe for watch page">
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+[Table of contents](#table-of-contents)
 
-------
+## User stories
 
-## Release History
+I used the GitHub projects board to log my user stories to help me manage my project. This helped me break the project down into smaller tasks that would be more manageable by moving them into the in-progress section whilst I focused on them. once a task was complete, I could move it into the done section to help me see my progress.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+<!-- ADD USERSTORIES IMAGES -->
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+<img src="assets/images/todo.png" alt="user stories">
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+<img src="assets/images/in-progress.png" alt="user stories in progress">
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+<img src="assets/images/Done.png" alt="user stories that are almost done">
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+[Table of contents](#table-of-contents)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## Objectives
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+- I want the user to see an image of Temm just under a navigation bar and I would like it to look static as the home page moves above it.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+    - Was this achieved?
+        - Yes
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+    - How was this achieved?
+        - This effect was achieved using the fixed keyword. In style.css under #main-img you'll see "background: url('../images/Rotem-2.png') center center / cover no-repeat fixed;" at the end there we have the word 2fixed".  This pins the background image to the viewpoint instead of the element itself; Because of this the image doesnt scroll with the rest of the page and all the pther page elements scroll over it.
+        The #main-img-outer container uses overflow: hidden and position: relative to contain the image and ensure it doesn't overflow, while the inner #main-img div applies the background image with the fixed attachment.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+- I want the user to be able to find Temms social media platforms easily.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+    - Was this achieved?
+        - Yes 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+    - How was this achieved?
+        - In the wireframes we had the social icons only in the footer on each page. I decided to also place them in the nav bar this makes sure that our users see the icons even if they never reach the bottom of a page.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+- I want the user to be able to find Temms music on all of the platforms that she streams her music from.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+    - Was this achieved?
+        - <!-- WAS IT ACHIEVED -->
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+    - How was this achieved?
+        - <!-- HOW -->
 
-------
+- I want the user to be able to follow a link to a ticket selling site at the click of a button.
 
-## FAQ about the uptime script
+    - Was this achieved?
+        - <!-- WAS IT ACHIEVED -->
 
-**Why have you added this script?**
+    - How was this achieved?
+        - <!-- HOW -->
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+- I want the user to be able to see videos and images from Temms previous shows.
 
-**How will this affect me?**
+    - Was this achieved?
+        - <!-- WAS IT ACHIEVED -->
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+    - How was this achieved?
+        - <!-- HOW -->
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+[Table of contents](#table-of-contents)
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+## Features
 
-**So….?**
+### Navigation Bar
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+- The navigation bar contains the links needed to use the website easily. This changes how it looks depending on the size of the screen it is being viewed on. 
+    - <!-- On both the mobile and larger screen versions Temms name is a link back to the home page. -->
+    - <!-- We have a neat list of the sites pages for easy navigation -->
+    - <!-- The social media icons are links for users to access temms social media pages easily. -->
 
-**Can I opt out?**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+<!-- ADD NAV BAR IMAGES -->
+<img src="media/readme_media/feature-temmsname.png" alt="Temms name in navigation bar functions">
+<img src="media/readme_media/feature-pagelist.png" alt="Navigation button function">
+<img src="media/readme_media/feature-navbar-mobile.png" alt="Mobile version of the navigation bar functions">
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+[Table of contents](#table-of-contents)
 
-**Anything more?**
+### Footer
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- The footer shows at the bottom of every page.
+    - It includes social media links in the form of icons.
+    - The footer also has a section for users to contact Temm via email.
 
----
+<!-- ADD FOOTER IMAGE -->
+<img src="media/readme_media/feature-footer.png" alt="Footer functions">
 
-Happy coding!
+[Table of contents](#table-of-contents)
+
+### Music links
+
+- We have a page for Temms songs where users can find links to each song on every platform Temm streams it from.
+
+<!-- ADD SONGS FUNCTION IMAGES -->
+<img src="media/readme_media/feature-songs.png" alt="songs functions">
+<img src="media/readme_media/feature-songs-mobile.png" alt="Songs function mobile version">
+
+[Table of contents](#table-of-contents)
+
+### Shows links
+
+- There is a page for Temms up and comming shows where users can find links to buy tickets.
+
+<!-- ADD SONGS FUNCTION IMAGES -->
+<img src="media/readme_media/feature-shows.png" alt="shows functions">
+<img src="media/readme_media/feature-shows-mobile.png" alt="Shows function mobile version">
+
+[Table of contents](#table-of-contents)
+
+### Videos
+
+- On the watch page you can find embedded vidios from Temms previous shows.
+
+<!-- ADD SONGS FUNCTION IMAGES -->
+<img src="media/readme_media/feature-video.png" alt="video functions">
+<img src="media/readme_media/feature-video-mobile.png" alt="Video function mobile version">
+
+[Table of contents](#table-of-contents)
+
+## SEO
+
+To improve the search engine optimisation of the site I have added some keywords in a meta tag to my base.html. I used WordTracker to research these short-tail and long-tail keywords to find out which words had the least competition.
+
+This is a list of all the keywords I came up with <!-- ADD LIST --> .
+
+<!-- ADD SEO IMAGES -->
+<img src="media/readme_media/seo8.png" alt="Research for seo">
+<img src="media/readme_media/seo7.png" alt="Research for seo">
+<img src="media/readme_media/seo6.png" alt="Research for seo">
+
+I ended up using these:
+
+
+- <!-- ADD USED WORDS -->
+- <!-- ADD USED WORDS -->
+- <!-- ADD USED WORDS -->
+- <!-- ADD USED WORDS -->
+- <!-- ADD USED WORDS -->
+
+<!-- ADD IMAGES OF IMPLIMENTED SEO -->
+<img src="media/readme_media/seo15.png" alt="Implimented seo">
+<img src="media/readme_media/seo16.png" alt="Implimented seo">
+<img src="media/readme_media/seo17.png" alt="Implimented seo">
+
+[Table of contents](#table-of-contents)
+
+## Testing
+
+## HTML
+
+HTML was tested using the official [W3C validator](https://validator.w3.org/nu/) 
+<!-- MAKE SURE TO TEST -->
+
+### Home
+
+The following errors/warnings were found:
+
+<!-- ADD TESTING HTML IMG -->
+<img src="media/readme_media/html-home.png" alt="Testing HTML for home page">
+
+1.<!-- ADD ERROR -->
+    - To fix this I <!-- ADD HOW IT WAS FIXED-->
+
+Retested: Error cleared
+
+### Music
+
+No errors were found.
+
+<!-- ADD MUSIC ERROR IMG -->
+<img src="media/readme_media/html-bag.png" alt="Testing HTML for the music page">
+
+### Shows
+
+No errors were found.
+
+<!-- ADD MUSIC ERROR IMG -->
+<img src="media/readme_media/html-bag.png" alt="Testing HTML for the shows page">
+
+### Watch
+
+No errors were found.
+
+<!-- ADD WATCH ERROR IMG -->
+<img src="media/readme_media/html-bag.png" alt="Testing HTML for the watch page">
+
+[Table of contents](#table-of-contents)
+
+## CSS
+ 
+CSS was tested using the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
+<!-- MAKE SURE TO TEST CSS -->
+
+No errors were found: <!-- HOPEFULLY -->
+
+[Table of contents](#table-of-contents)
+
+### style.css
+
+<!-- ADD CSS TESTING IMG -->
+<img src="media/readme_media/css-style.png" alt="Testing css for style.css">
+
+## Manual Testing 
+
+
+Component | Function | Does it work? | Fixed? 
+--------- | --------- | ----------------- | ------ |
+Navbar: Logo | Takes user to home page | <!-- does it work? --> | N/A
+Navbar: home button | Takes user to home page | <!-- does it work? --> | N/A
+Navbar: Music button | Takes user to music page | <!-- does it work? --> | N/A
+Navbar: Shows button | Takes user to shows page | <!-- does it work? --> | N/A
+Navbar: Watch button | Takes user to watch page | <!-- does it work? --> | N/A
+Navbar: Spotify icon | Takes user to Temms spotify | <!-- does it work? --> | N/A
+Navbar: Instagram icon | Takes user to Temms instagram | <!-- does it work? --> | N/A
+Navbar: Youtube icon | Takes user to Temms Youtube | <!-- does it work? --> | N/A
+Music: song 1 card spotify link | links to this song on spotify | <!-- does it work? --> | N/A
+Music: song 1 card youtube link | links to this song on youtube | <!-- does it work? --> | N/A
+Music: song 2 card spotify link | links to this song on spotify | <!-- does it work? --> | N/A
+Music: song 2 card youtube link | links to this song on youtube | <!-- does it work? --> | N/A
+Music: song 3 card spotify link | links to this song on spotify | <!-- does it work? --> | N/A
+Music: song 3 card youtube link | links to this song on youtube | <!-- does it work? --> | N/A
+Music: song 4 card spotify link | links to this song on spotify | <!-- does it work? --> | N/A
+Music: song 4 card youtube link | links to this song on youtube | <!-- does it work? --> | N/A
+Music: song 1 card spotify link | links to this song on spotify | <!-- does it work? --> | N/A
+Shows: show 1 card link | links to this shows ticket sale point | <!-- does it work? --> | N/A
+Shows: show 2 card link | links to this shows ticket sale point | <!-- does it work? --> | N/A
+Watch: Video 1 | Plays 1st video | <!-- does it work? --> | N/A
+Watch: Video 2 | Plays 2nd video | <!-- does it work? --> | N/A
+Footer: Spotify icon | Takes user to Temms spotify | <!-- does it work? --> | N/A
+Footer: Instagram icon | Takes user to Temms instagram | <!-- does it work? --> | N/A
+Footer: Youtube icon | Takes user to Temms Youtube | <!-- does it work? --> | N/A
+
+[Table of contents](#table-of-contents)
+
+## Bugs
+
+<!-- ADD BUGS -->
+
+I was having problems figuring out ......
+
+I realised that I hadn't ....
+
+To fix this I ....
+
+[Table of contents](#table-of-contents)
+
+
+## Deployment
+
+<!--
+<- Create a new app on heroku 
+- In resources add heroku postgres
+- In settings review config vars, copy the DATABASE_URL
+- In gitpod make a file called env.py, use this to store our environment variables.
+- make sure env.py is in gitignore file
+- Add your secret key environment variable to both the env.py file and heroku config vars
+- Reference the env file in the settings.py file.
+- Add the secret key environment variable to settings.py.
+- Highlight database section and comment it out, 
+replace with the following:
+DATABASES = {
+   'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
+- run migrations
+-->
+
+[Table of contents](#table-of-contents)
+
+## Credits
+
+Thankyou to Rotem for helping me bring her vision to life.
+
+images from: 
+
+Am I responsive: http://ami.responsivedesign.is/
+
+To help with the SEO I used word tracker - https://www.wordtracker.com/?fpr=refer&fp_sid=bingof
+
+To test the html is used <!-- ADD WEBSITE USED -->
+
+To test the css is used <!-- ADD WEBSITE USED -->
+
+[Table of contents](#table-of-contents)
