@@ -212,85 +212,32 @@ a, a:visited {
     color: #800000;
 } 
    
+
 /* Song Section */
 
 .song-section {
-    width: 100vw;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
     display: flex;
-    min-height: 100%;
-    align-items: center;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
-.card-container {
-    display: flex;
-    gap: 30px;
-    width: 100%;
-    justify-content: center;
+/* Container to hold the card */
+.flip-card {
+  width: 250px;
+  perspective: 1000px; /*Enables 3D effect */
+  transition: .7s ease;
 }
 
-.card {
-    position: relative;
-    background-color: #aabbaa;
-    border: #aabbaa;
-    list-style: none;
-    width: 220px;
-    transition: .3s ease;
+/* Inner wrapper for front and back */
+.flip-card-inner {
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
 }
 
-.card::before {
-    content: "";
-    display: block;
-    padding-bottom: 150%;
-    width: 100%;
-}
-
-.card-background {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    top: 0;
-    border-radius: 20px;
-    background-size: 350px;
-    background-position: center;
-    filter: brightness(.9) saturate(1) contrast(1);
-    transform-origin: bottom;
-    transform: scale(1) translateZ(0);
-    transition: .3s ease;
-}
-
-.card:hover .card-background {
-    transform: scale(1.5) translateZ(0);
-    background-size: 260px;
-}
-
-.card-container:hover .card:not(:hover) {
-    transform: scale(.7);
-}
-
-.card-container:hover > .card:not(:hover) .card-background,
-.card-container:hover > .card:not(:hover) .card-category {
-    filter: brightness(.5) saturate(0) contrast(1.2) blur(20px)
-}
-
-.content {
-    top: 50%;
-    left: 0;
-    padding: 25px;
-    position: absolute;
-}
-
-.content-2 {
-    top: 50%;
-    left: 0;
-    padding: 25px;
-    position: absolute;
-    color: #fff;
+/* Flip on hover */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg) scale(1.4) translateZ(0);
 }
 
 .card-category {
@@ -303,9 +250,53 @@ a, a:visited {
 .card-heading {
     font-size: 25px;
     line-height: 1;
-    text-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, .9);
+}  
+
+.song-section:hover > .flip-card:not(:hover) {
+    filter: brightness(.5) saturate(0) contrast(1.2) blur(20px);
+    transform: scale(.7);
+    /* z-index: -1; */
 }
 
+.content {
+    top: 50%;
+    padding: 25px;
+    position: absolute;
+}
+
+/* Front and back faces */
+.flip-card-front, .flip-card-back {
+  height: 320px;
+  backface-visibility: hidden; /* Hide the back when facing front */
+  width: 220px;
+}
+
+/* Front face styling */
+.flip-card-front {
+  border: 2px solid #aabbaa;
+  position: absolute;
+
+}
+
+.card-background {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    border-radius: 23px;
+    background-size: 350px;
+    background-position: center;
+    filter: brightness(.9) saturate(1) contrast(1);
+}
+
+/* Back face styling */
+.flip-card-back {
+  border-radius: 23px;
+  background-position: center;
+  transform: rotateY(180deg);
+}
 
 
 
@@ -368,3 +359,6 @@ footer a {
     bottom: 10px;
     margin-right:20px;
 }
+
+
+

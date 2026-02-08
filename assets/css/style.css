@@ -275,7 +275,7 @@ a, a:visited {
 }
 
 .card-container:hover > .card:not(:hover) .card-background,
-.card-container:hover > .card:not(:hover) .card-category {
+.card-container:hover > .card:not(:hover) .card-category  {
     filter: brightness(.5) saturate(0) contrast(1.2) blur(20px)
 }
 

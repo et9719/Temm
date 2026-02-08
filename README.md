@@ -295,11 +295,22 @@ Footer: Youtube icon | Takes user to Temms Youtube | <!-- does it work? --> | N/
 
 <!-- ADD BUGS -->
 
-I was having problems figuring out ......
+I decided to add an extra visual effect to the music cards. The original idea was that when a user hovered over a song card, it would increase in size while the other cards would shrink slightly and blur out, helping the selected song feel clearer and more focused. I managed to get this working and was happy with the result, especially because the images on the non-focused cards were blurred while the text on top remained readable.
 
-I realised that I hadn't ....
+<img src="assets/images/music-bug-before.png" alt="Music Cards Bug Before">
 
-To fix this I ....
+The issue arose when I tried to add another effect: I wanted the hovered card to flip as it increased in size, allowing links to streaming services to be displayed on the reverse side. While I was able to get most of this working, I ran into problems maintaining the readability of the text on the non-hovered cards. This was the one part of the effect that I couldn’t fully resolve.
+
+<img src="assets/images/music-bug-after.png" alt="Music Cards Bug after">
+
+I realised that the .card-background div was wrapping around the .content div, which contains the text. Because the blur effect was applied to the .card-background class, it was also affecting the .content div as a child element.
+
+<img src="assets/images/music-bug-fixed.png" alt="Music Cards Bug fixed">
+
+To fix this, I moved the closing div for .card-background so that it no longer contained the .content div. This made .card-background a sibling of .content rather than its parent, allowing the blur effect to apply only to the background while keeping the text clear and readable.
+
+<img src="assets/images/music-bug-html-before.png" alt="Music Cards Bug html before">
+<img src="assets/images/music-bug-html-after.png" alt="Music Cards Bug html After">
 
 [Table of contents](#table-of-contents)
 
